@@ -27,6 +27,9 @@ public class PolicyHandler{
             Optional<LectureSystem> lectureSystemOptional = lectureSystemRepository.findById(lectureId);
             LectureSystem lectureSystem = lectureSystemOptional.get();
             int studentCnt = lectureSystem.getStudentNumber();
+
+            System.out.println("##### 수강자수 :" + studentCnt + " ");
+
             lectureSystem.setStudentNumber(studentCnt++);
             lectureSystemRepository.save(lectureSystem);
 
@@ -34,7 +37,7 @@ public class PolicyHandler{
         }
     }
 
-    @StreamListener(KafkaProcessor.INPUT)
+/*    @StreamListener(KafkaProcessor.INPUT)
     public void wheneverPaymentCanceled_수강자수변경(@Payload Long lectureId){
 
         Optional<LectureSystem> lectureSystemOptional = lectureSystemRepository.findById(lectureId);
@@ -45,7 +48,7 @@ public class PolicyHandler{
         lectureSystemRepository.save(lectureSystem);
 
         System.out.println("##### listener 수강자수 - 1 변경 완료");
-    }
+    }*/
 
 
 
