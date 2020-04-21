@@ -16,15 +16,17 @@ public class LectureSystem {
 
     @PostPersist
     public void onPostPersist(){
+
         LectureOpened lectureOpened = new LectureOpened();
         BeanUtils.copyProperties(this, lectureOpened);
+        lectureOpened.setStudentNumber(0);
         lectureOpened.publish();
-
 
     }
 
     @PostRemove
     public void onPostRemove(){
+
         OpenedCanceled openedCanceled = new OpenedCanceled();
         BeanUtils.copyProperties(this, openedCanceled);
         openedCanceled.publish();

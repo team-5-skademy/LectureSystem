@@ -12,21 +12,4 @@ import java.util.List;
  @RestController
  public class LectureSystemController {
 
-@RequestMapping(value = "/",
-        method = RequestMethod.DELETE,
-        produces = "application/json;charset=UTF-8")
-
-public void lectureCancellation(HttpServletRequest request, HttpServletResponse response)
-        throws Exception {
-        System.out.println("##### /lectureSystem/lectureCancellation  called #####");
-        }
-
-@RequestMapping(value = "/",
-        method = RequestMethod.POST,
-        produces = "application/json;charset=UTF-8")
-
-public void lectureOpen(HttpServletRequest request, HttpServletResponse response)
-        throws Exception {
-        System.out.println("##### /lectureSystem/lectureOpen  called #####");
-        }
- }
+}

@@ -6,7 +6,7 @@ public class OpenedCanceled extends AbstractEvent {
     private String lectureName;
     private Integer studentNumber;
 
-    public OpenedCanceled(){
+    public OpenedCanceled() {
         super();
     }
 
